@@ -1,11 +1,134 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--import de fontawesome pour ajouter des icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Portfolio</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <header id="accueil">
+    <div class="container">
+      <video autoplay loop muted plays-inline class="video">
+        <source src="video/black-hole.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <h1>Thomas GROSSAT</h1>
+  </header>
+
+  <body id="corp">
+    <section id="about">
+      <h2>À propos de moi</h2>
+
+      <div class="about-container">
+        <!-- Texte à gauche -->
+        <div class="about-text">
+          <p>
+            Bonjour ! Je suis un développeur passionné par la création de sites
+            web et d’applications modernes. J’aime apprendre de nouvelles
+            technologies et relever des défis techniques.
+          </p>
+          <button>
+            <a href="Documents/CV.pdf" download>Télécharger mon CV</a>
+          </button>
+          <button>
+            <a href="https://github.com/Thomas-Grsst" target="_blank"
+              >Visitez mon GitHub</a
+            >
+          </button>
+        </div>
+
+        <!-- Image du CV à droite -->
+        <div class="about-cv">
+          <img src="images/Thomas-GROSSAT.png" alt="Aperçu du CV" />
+        </div>
+      </div>
+    </section>
+
+    <section id="competences">
+      <h3 id="langage">Langages</h3>
+      <ul class="icons">
+        <i class="fa-brands fa-html5" style="color: #e34f26"></i>
+        <i class="fa-brands fa-css3-alt" style="color: #264de4"></i>
+        <i class="fa-brands fa-js" style="color: #f0db4f"></i>
+        <i class="fa-brands fa-php" style="color: #787cb5"></i>
+        <i class="fa-brands fa-python" style="color: #3776ab"></i>
+        <i class="fa-solid fa-database" style="color: #003b57"></i>
+        <i class="fa-brands fa-react" style="color: #61dafb"></i>
+        <i class="fa-brands fa-js-square" style="color: #3178c6"></i>
+        <i class="fa-brands fa-laravel" style="color: #f5050c"></i>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projets</h2>
+
+      <div class="projects-container">
+        <!-- Projet 1 -->
+        <div class="project">
+          <div class="project-image">
+            <img src="images/fils-de-plante.png" alt="Fils De Plante" />
+          </div>
+          <div class="project-text">
+            <h3>Projet Potager Virtuel</h3>
+            <p>
+              Un site web interactif permettant aux utilisateurs de rechercher
+              les plantes qu'ils souhaitent et d'obtenir des informations
+              détaillées à leur sujet. Il inclut une section de conseils et un
+              potager virtuel. Projet de BTS SIO 2ieme année.
+            </p>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="project reverse">
+          <div class="project-image">
+            <img src="images/sportom.png" alt="Sportom" />
+          </div>
+          <div class="project-text">
+            <h3>Sportom</h3>
+            <p>
+              Un site web développé en Laravel qui permet aux utilisateurs de
+              découvrir de nombreux exercices de musculation, d’en créer
+              eux-mêmes et de les ajouter à leurs favoris.
+            </p>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project">
+          <div class="project-image">
+            <img src="images/laramo.png" alt="LaraMo" />
+          </div>
+          <div class="project-text">
+            <h3>LaraMo</h3>
+            <p>
+              Un site web de conseils et astuces pour Laravel, avec une
+              documentation personnalisée pour développer de meilleures
+              applications et sites web avec Laravel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <footer>
+    <p>&copy; 2025 Mon Portfolio Personnel</p>
+  </footer>
 </html>
