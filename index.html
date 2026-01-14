@@ -13,6 +13,39 @@
   </head>
 
   <header id="accueil">
+    <div class="burger" onclick="toggleMenu(this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="menu" id="menu">
+      <div class="menu-header">
+        <img
+          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+          alt="Photo de profil"
+          class="profile-image"
+        />
+        <h2 class="menu-title">Mon Site Web</h2>
+      </div>
+
+      <div class="menu-links">
+        <a href="#"><i class="fas fa-home"></i> Accueil</a>
+        <a href="BTS-SIO.html"><i class="fas fa-cog"></i> BTS SIO</a>
+        <a href="veille-info.html"
+          ><i class="fas fa-brain"></i> Veille Informatique</a
+        >
+        <a href="/certifications.html"
+          ><i class="fas fa-certificate"></i> Certifications</a
+        >
+
+        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="#"><i class="fas fa-info-circle"></i> À propos</a>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
     <div class="container">
       <video autoplay loop muted plays-inline class="video">
         <source src="video/black-hole.mp4" type="video/mp4" />
@@ -41,7 +74,8 @@
           <p>
             Bonjour ! Je suis un développeur passionné par la création de sites
             web et d’applications modernes. J’aime apprendre de nouvelles
-            technologies et relever des défis techniques.
+            technologies et relever des défis techniques. Et j'aime les
+            baby-foots !
           </p>
           <button>
             <a href="Documents/CV.pdf" download>Télécharger mon CV</a>
@@ -90,7 +124,7 @@
               Un site web interactif permettant aux utilisateurs de rechercher
               les plantes qu'ils souhaitent et d'obtenir des informations
               détaillées à leur sujet. Il inclut une section de conseils et un
-              potager virtuel. Projet de BTS SIO 2ieme année.
+              potager virtuel. Projet de BTS SIO 2ieme année
             </p>
           </div>
         </div>
@@ -98,14 +132,14 @@
         <!-- Projet 2 -->
         <div class="project reverse">
           <div class="project-image">
-            <img src="images/sportom.png" alt="Sportom" />
+            <img src="images/revisetonsio.png" alt="Revise Ton SIO" />
           </div>
           <div class="project-text">
-            <h3>Sportom</h3>
+            <h3>Révise Ton SIO</h3>
             <p>
-              Un site web développé en Laravel qui permet aux utilisateurs de
-              découvrir de nombreux exercices de musculation, d’en créer
-              eux-mêmes et de les ajouter à leurs favoris.
+              Un site web développé en HTML-CSS-JS pour pouvoir l'héberger
+              simplement. Il sert à réviser le BTS SIO, pour moi, la classe, et
+              potentiellement les futures classes de SIO
             </p>
           </div>
         </div>
@@ -113,7 +147,7 @@
         <!-- Projet 3 -->
         <div class="project">
           <div class="project-image">
-            <img src="images/laramo.png" alt="LaraMo" />
+            <img src="images/garage-thete.png" alt="Garage Thete" />
           </div>
           <div class="project-text">
             <h3>LaraMo</h3>
@@ -124,11 +158,60 @@
             </p>
           </div>
         </div>
+
+        <!-- Projet 4 -->
+        <div class="project reverse">
+          <div class="project-image">
+            <img src="images/langstack.png" alt="Langstack" />
+          </div>
+          <div class="project-text">
+            <h3>LangStack</h3>
+            <p>
+              Un site web développé aussi en HTML-CSS-JS pour pouvoir L'héberger
+              facilement. C'est un site personnel surtout, pour pouvoir réviser
+              certains langages en cas de besoin ou avoir une doc personnalisé
+            </p>
+          </div>
+        </div>
+
+        <!-- Projet 5 -->
+        <div class="project">
+          <div class="project-image">
+            <img src="images/jarvis.png" alt="Jarvis" />
+          </div>
+          <div class="project-text">
+            <h3>JARVIS</h3>
+            <p>
+              Encore en cours de développement. Un assistant IA boosté avec
+              Ollama. Un système de prompt, TTS-STT, possédant plein de
+              capacités (recherche sur le web, envoi de messages etc).
+              Développer en Python et React
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </body>
 
   <footer>
-    <p>&copy; 2025 Mon Portfolio Personnel</p>
+    <p>&copy; 2026 | Thomas GROSSAT</p>
   </footer>
+
+  <script>
+    const menu = document.getElementById("menu");
+    const overlay = document.getElementById("overlay");
+    const burger = document.querySelector(".burger");
+
+    function toggleMenu(btn) {
+      menu.classList.toggle("menu-active");
+      overlay.classList.toggle("overlay-active");
+      btn.classList.toggle("active");
+    }
+
+    function closeMenu() {
+      menu.classList.remove("menu-active");
+      overlay.classList.remove("overlay-active");
+      burger.classList.remove("active");
+    }
+  </script>
 </html>

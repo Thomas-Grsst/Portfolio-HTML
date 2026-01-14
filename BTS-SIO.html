@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--import de fontawesome pour ajouter des icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/bts-sio.css" />
+    <title>Portfolio - BTS SIO</title>
+  </head>
+
+  <header id="accueil">
+    <div class="burger" onclick="toggleMenu(this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="menu" id="menu">
+      <div class="menu-header">
+        <img
+          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+          alt="Photo de profil"
+          class="profile-image"
+        />
+        <h2 class="menu-title">Mon Site Web</h2>
+      </div>
+
+      <div class="menu-links">
+        <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+        <a href="BTS-SIO.html"><i class="fas fa-graduation-cap"></i> BTS SIO</a>
+        <a href="veille-info.html"
+          ><i class="fas fa-brain"></i> Veille Technologique</a
+        >
+        <a href="/certifications.html"
+          ><i class="fas fa-certificate"></i> Certifications</a
+        >
+        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="#"><i class="fas fa-info-circle"></i> À propos</a>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <div class="container">
+      <video autoplay loop muted plays-inline class="video">
+        <source src="video/black-hole.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <h1>BTS SIO</h1>
+    <p class="subtitle">
+      Brevet de Technicien Supérieur - Services Informatiques aux Organisations
+    </p>
+    <p class="date-range">Formation en informatique sur 2 ans</p>
+  </header>
+
+  <body id="corp">
+    <section id="bts-sio">
+      <div class="bts-container">
+        <!-- Introduction -->
+        <div class="bts-intro">
+          <h2>Présentation du BTS SIO</h2>
+          <p>
+            Le Brevet de Technicien Supérieur Services Informatiques aux
+            Organisations (BTS SIO) est une formation diplômante de niveau Bac+2
+            qui prépare aux métiers de l'informatique et des services
+            numériques. Cette formation allie théorie et pratique avec une
+            période significative en entreprise.
+          </p>
+        </div>
+
+        <!-- Les deux options -->
+        <div class="options-section">
+          <h2>
+            <i class="fas fa-code-branch"></i> Les deux options du BTS SIO
+          </h2>
+
+          <div class="options-grid">
+            <!-- Option SISR -->
+            <div class="option-card">
+              <div class="option-header">
+                <i class="fas fa-network-wired"></i>
+                <h3>Option SISR</h3>
+                <span class="option-badge"
+                  >Solutions d'Infrastructure, Systèmes et Réseaux</span
+                >
+              </div>
+              <div class="option-content">
+                <h4>Compétences développées :</h4>
+                <ul>
+                  <li>Administration des systèmes et des réseaux</li>
+                  <li>Virtualisation et cloud computing</li>
+                  <li>Cybersécurité et protection des données</li>
+                  <li>Gestion de parc informatique</li>
+                  <li>Maintenance et dépannage</li>
+                  <li>Supervision d'infrastructure</li>
+                </ul>
+                <h4>Débouchés professionnels :</h4>
+                <ul>
+                  <li>Administrateur systèmes et réseaux</li>
+                  <li>Technicien support informatique</li>
+                  <li>Spécialiste cybersécurité</li>
+                  <li>Technicien cloud</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Option SLAM -->
+            <div class="option-card">
+              <div class="option-header">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Option SLAM</h3>
+                <span class="option-badge"
+                  >Solutions Logicielles et Applications Métiers</span
+                >
+              </div>
+              <div class="option-content">
+                <h4>Compétences développées :</h4>
+                <ul>
+                  <li>Développement d'applications</li>
+                  <li>Conception de bases de données</li>
+                  <li>Développement web et mobile</li>
+                  <li>Cybersécurité des applications</li>
+                  <li>Maintenance applicative</li>
+                  <li>Tests et déploiement</li>
+                </ul>
+                <h4>Débouchés professionnels :</h4>
+                <ul>
+                  <li>Développeur d'applications</li>
+                  <li>Programmeur analyste</li>
+                  <li>Développeur web/mobile</li>
+                  <li>Technicien d'assistance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Programme de formation -->
+        <div class="programme-section">
+          <h2><i class="fas fa-book-open"></i> Programme de la formation</h2>
+
+          <div class="matieres-grid">
+            <div class="matiere-category">
+              <h3>Enseignements généraux</h3>
+              <div class="matiere-list">
+                <div class="matiere-item">
+                  <span class="matiere-nom"
+                    >Culture générale et expression</span
+                  >
+                  <span class="matiere-coeff">Coefficient 3</span>
+                </div>
+                <div class="matiere-item">
+                  <span class="matiere-nom"
+                    >Expression et communication en anglais</span
+                  >
+                  <span class="matiere-coeff">Coefficient 2</span>
+                </div>
+                <div class="matiere-item">
+                  <span class="matiere-nom"
+                    >Mathématiques pour l'informatique</span
+                  >
+                  <span class="matiere-coeff">Coefficient 2</span>
+                </div>
+                <div class="matiere-item">
+                  <span class="matiere-nom"
+                    >Culture économique et juridique</span
+                  >
+                  <span class="matiere-coeff">Coefficient 2</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="matiere-category">
+              <h3>Enseignements professionnels</h3>
+              <div class="matiere-list">
+                <div class="matiere-item">
+                  <span class="matiere-nom"
+                    >Support et mise à disposition de services
+                    informatiques</span
+                  >
+                  <span class="matiere-coeff">Coefficient 3</span>
+                </div>
+                <div class="matiere-item">
+                  <span class="matiere-nom"
+                    >Cybersécurité des services informatiques</span
+                  >
+                  <span class="matiere-coeff">Coefficient 3</span>
+                </div>
+                <div class="matiere-item">
+                  <span class="matiere-nom"
+                    >Option spécifique (SISR ou SLAM)</span
+                  >
+                  <span class="matiere-coeff">Coefficient 5</span>
+                </div>
+                <div class="matiere-item">
+                  <span class="matiere-nom">Parcours de certification</span>
+                  <span class="matiere-coeff">Coefficient 1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stages et alternance -->
+        <div class="stage-section">
+          <h2><i class="fas fa-briefcase"></i> Stage en entreprise</h2>
+          <div class="stage-content">
+            <div class="stage-info">
+              <div class="stage-item">
+                <i class="fas fa-calendar-alt"></i>
+                <div>
+                  <h4>Durée du stage</h4>
+                  <p>10 à 12 semaines réparties sur les 2 années</p>
+                </div>
+              </div>
+              <div class="stage-item">
+                <i class="fas fa-tasks"></i>
+                <div>
+                  <h4>Objectifs</h4>
+                  <p>Mise en pratique des compétences acquises en formation</p>
+                </div>
+              </div>
+              <div class="stage-item">
+                <i class="fas fa-file-alt"></i>
+                <div>
+                  <h4>Rapport de stage</h4>
+                  <p>Rédaction d'un rapport et soutenance orale</p>
+                </div>
+              </div>
+            </div>
+            <div class="stage-avantages">
+              <h4>Avantages du stage :</h4>
+              <ul>
+                <li>Expérience professionnelle concrète</li>
+                <li>Application des connaissances théoriques</li>
+                <li>Découverte du monde de l'entreprise</li>
+                <li>Opportunité d'embauche</li>
+                <li>Réseau professionnel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compétences acquises -->
+        <div class="competences-section">
+          <h2><i class="fas fa-cogs"></i> Compétences acquises</h2>
+          <div class="competences-grid">
+            <div class="competence-category">
+              <h3><i class="fas fa-tools"></i> Compétences techniques</h3>
+              <ul>
+                <li>Développement d'applications</li>
+                <li>Gestion de bases de données</li>
+                <li>Administration de réseaux</li>
+                <li>Cybersécurité</li>
+                <li>Virtualisation</li>
+                <li>Cloud computing</li>
+              </ul>
+            </div>
+            <div class="competence-category">
+              <h3><i class="fas fa-users"></i> Compétences transversales</h3>
+              <ul>
+                <li>Gestion de projet</li>
+                <li>Travail en équipe</li>
+                <li>Communication professionnelle</li>
+                <li>Résolution de problèmes</li>
+                <li>Veille technologique</li>
+                <li>Adaptabilité</li>
+              </ul>
+            </div>
+            <div class="competence-category">
+              <h3><i class="fas fa-shield-alt"></i> Compétences métier</h3>
+              <ul>
+                <li>Analyse des besoins clients</li>
+                <li>Conception de solutions</li>
+                <li>Déploiement et maintenance</li>
+                <li>Support utilisateur</li>
+                <li>Documentation technique</li>
+                <li>Respect des normes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poursuite d'études -->
+        <div class="etudes-section">
+          <h2><i class="fas fa-graduation-cap"></i> Poursuite d'études</h2>
+          <div class="etudes-content">
+            <p>
+              Après l'obtention du BTS SIO, plusieurs possibilités s'offrent aux
+              diplômés :
+            </p>
+            <div class="etudes-options">
+              <div class="etude-option">
+                <h4>Licences Professionnelles</h4>
+                <ul>
+                  <li>Développement d'applications</li>
+                  <li>Administration de réseaux</li>
+                  <li>Cybersécurité</li>
+                  <li>Cloud computing</li>
+                </ul>
+              </div>
+              <div class="etude-option">
+                <h4>Écoles d'ingénieurs</h4>
+                <ul>
+                  <li>Informatique et réseaux</li>
+                  <li>Cybersécurité</li>
+                  <li>Data science</li>
+                  <li>Intelligence artificielle</li>
+                </ul>
+              </div>
+              <div class="etude-option">
+                <h4>Autres formations</h4>
+                <ul>
+                  <li>Bachelor Universitaire de Technologie</li>
+                  <li>Certifications professionnelles</li>
+                  <li>Formations spécialisées</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mon parcours BTS SIO -->
+        <div class="mon-parcours">
+          <h2><i class="fas fa-user-graduate"></i> Mon parcours en BTS SIO</h2>
+          <div class="parcours-content">
+            <div class="parcours-info">
+              <div class="parcours-item">
+                <i class="fas fa-calendar"></i>
+                <div>
+                  <h4>Année de formation</h4>
+                  <p>2024 - 2026</p>
+                </div>
+              </div>
+              <div class="parcours-item">
+                <i class="fas fa-code"></i>
+                <div>
+                  <h4>Option choisie</h4>
+                  <p>SLAM - Solutions Logicielles et Applications Métiers</p>
+                </div>
+              </div>
+              <div class="parcours-item">
+                <i class="fas fa-building"></i>
+                <div>
+                  <h4>Établissement</h4>
+                  <p>Business School by CSND</p>
+                </div>
+              </div>
+            </div>
+            <div class="parcours-projets">
+              <h4>Projets réalisés durant mon BTS :</h4>
+              <ul>
+                <li>LangStack</li>
+                <li>RéviseTonSIO</li>
+                <li>Fils de Plante</li>
+                <li>Garage THETE</li>
+                <li>Jarvis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <footer>
+    <p>&copy; 2025 Mon Portfolio Personnel</p>
+  </footer>
+
+  <script>
+    const menu = document.getElementById("menu");
+    const overlay = document.getElementById("overlay");
+    const burger = document.querySelector(".burger");
+
+    function toggleMenu(btn) {
+      menu.classList.toggle("menu-active");
+      overlay.classList.toggle("overlay-active");
+      btn.classList.toggle("active");
+    }
+
+    function closeMenu() {
+      menu.classList.remove("menu-active");
+      overlay.classList.remove("overlay-active");
+      burger.classList.remove("active");
+    }
+  </script>
+</html>

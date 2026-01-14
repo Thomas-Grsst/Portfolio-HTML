@@ -115,6 +115,143 @@ nav.fixed {
   border-bottom: 2px solid #8c7503;
 }
 
+/* ---------- Hamberger ---------- */
+.burger {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.burger span {
+  height: 4px;
+  background: #f2e63d;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background: #f0f0f0;
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+  background: #f0f0f0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+  background: #f0f0f0;
+}
+
+/* ---------- Menu ---------- */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 280px;
+  height: 100%;
+  background: linear-gradient(to bottom, #2d2d2d, #1a1a1a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  transition: left 0.4s ease;
+  z-index: 99;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.menu-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f2e63d;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(242, 230, 61, 0.3);
+}
+
+.menu-title {
+  color: #f2e63d;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.menu a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 12px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.menu a i {
+  margin-right: 12px;
+  font-size: 1.3rem;
+  color: #f2e63d;
+}
+
+.menu a:hover {
+  color: #1a1a1a;
+  background-color: #f2e63d;
+  transform: translateX(5px);
+}
+
+.menu a:hover i {
+  color: #1a1a1a;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 98;
+}
+
+.menu-active {
+  left: 0;
+}
+
+.overlay-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* ---------- SECTIONS ---------- */
 section {
   max-width: 1100px;

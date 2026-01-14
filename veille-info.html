@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--import de fontawesome pour ajouter des icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Portfolio - Veille Technologique</title>
+  </head>
+
+  <header id="accueil">
+    <div class="burger" onclick="toggleMenu(this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="menu" id="menu">
+      <div class="menu-header">
+        <img
+          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+          alt="Photo de profil"
+          class="profile-image"
+        />
+        <h2 class="menu-title">Mon Site Web</h2>
+      </div>
+
+      <div class="menu-links">
+        <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+        <a href="BTS-SIO.html"><i class="fas fa-user"></i> BTS SIO</a>
+        <a href="#"><i class="fas fa-brain"></i> Veille Technologique</a>
+        <a href="/certifications.html"
+          ><i class="fas fa-certificate"></i> Certifications</a
+        >
+        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="#"><i class="fas fa-info-circle"></i> À propos</a>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <div class="container">
+      <video autoplay loop muted plays-inline class="video">
+        <source src="video/black-hole.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <h1>Veille Technologique</h1>
+    <p class="subtitle">
+      L'évolution de l'IA dans le développement informatique
+    </p>
+    <p class="date-range">Novembre 2024 - 28 Août 2025</p>
+  </header>
+
+  <body id="corp">
+    <section id="veille">
+      <div class="veille-container">
+        <div class="veille-intro">
+          <h2>Introduction</h2>
+          <p>
+            La période de novembre 2024 à août 2025 a été marquée par une
+            accélération sans précédent de l'intégration de l'intelligence
+            artificielle dans le cycle de vie du développement logiciel. L'IA a
+            cessé d'être un simple outil d'assistance pour devenir un co-pilote
+            stratégique, voire un automate autonome sur certaines tâches. Cette
+            veille synthétise les avancées majeures, les tendances émergentes et
+            les défis persistants qui ont redéfini la pratique du développement
+            informatique.
+          </p>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <div class="veille-section">
+          <h2>
+            <i class="fas fa-chart-line"></i> 1. Performances et optimisations
+            des modèles d'IA
+          </h2>
+          <div class="veille-content">
+            <div class="veille-item">
+              <h3>Suprématie technique sur les benchmarks</h3>
+              <p>
+                En décembre 2024, les modèles d'IA ont atteint un score de 67,3
+                points sur le benchmark SWE-bench (contre 18,8 un an plus tôt),
+                dépassant pour la première fois les développeurs juniors et
+                intermédiaires dans des résolutions de bugs et d'issues
+                complexes et chronométrées.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Efficacité et réduction des coûts</h3>
+              <p>
+                La course à l'efficacité s'est intensifiée. Entre octobre 2022
+                et novembre 2024, le coût d'inférence est passé de 20 $ à 0,07 $
+                par million de tokens. Cette tendance s'est poursuivie en 2025
+                avec des modèles comme Gemini 2.0 Flash (Google, mai 2025) et
+                Llama 3.1 405B (Meta, juillet 2024) qui offrent un rapport
+                performance/coût inédit, rendant l'IA haut de gamme accessible
+                aux petites structures.
+              </p>
+            </div>
+
+            <div class="veille-item">
+              <h3>Maturité de l'Open Source</h3>
+              <p>
+                Le rapport LMSYS du 15 janvier 2025 a confirmé que l'écart de
+                performance entre les modèles open-source (comme Mistral AI,
+                Codestral) et les modèles propriétaires (GPT-4, Claude 3.5)
+                était inférieur à 2% pour des tâches de codage spécifiques. Cela
+                a conduit à une adoption massive dans les entreprises soucieuses
+                de souveraineté et de coût.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <div class="veille-section">
+          <h2>
+            <i class="fas fa-code"></i> 2. Applications de l'IA dans le
+            développement logiciel : De l'assistance à l'autonomie
+          </h2>
+          <div class="veille-content">
+            <div class="veille-item">
+              <h3>Génération de code omniprésente</h3>
+              <p>
+                L'étude Stack Overflow du 20 novembre 2024 révélait que 61,8%
+                des développeurs web utilisaient des outils IA. En août 2025, ce
+                chiffre avoisine les 85%. Les assistants (GitHub Copilot, Amazon
+                Q Developer, Tabnine) sont devenus un standard de l'IDE.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>L'ère des Agents Autonomes</h3>
+              <p>
+                La mise à jour de Microsoft Copilot Studio (10 janvier 2025) a
+                marqué un tournant, permettant de créer des agents capables de
+                gérer des workflows multi-étapes (ex: "corriger un bug, créer un
+                test, déployer sur la preprod"). En juillet 2025, des prototypes
+                d'agents pouvant implémenter des features complètes à partir
+                d'un ticket Jira ont été démontrés.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Génération de code "low-code" et d'UI</h3>
+              <p>
+                Les outils comme Cursor AI et Anima ont vu leur adoption
+                exploser. Le rapport Gartner du 5 février 2025 a validé une
+                réduction de 30% des délais de prototypage en générant des
+                interfaces utilisateur directement à partir de maquettes ou de
+                descriptions textuelles.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Débogage et sécurité proactifs</h3>
+              <p>
+                Au-delà de la détection d'anomalies (45% des entreprises en mars
+                2025), l'IA est désormais utilisée pour suggérer des correctifs
+                de sécurité en temps réel. Les NPU des PC permettent une analyse
+                locale et instantanée du code contre les vulnérabilités connues.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <div class="veille-section">
+          <h2>
+            <i class="fas fa-server"></i> 3. Infrastructures et matériel : La
+            course à la puissance
+          </h2>
+          <div class="veille-content">
+            <div class="veille-item">
+              <h3>La généralisation du PC "AI-ready"</h3>
+              <p>
+                L'annonce de Microsoft (1er décembre 2024) concernant les NPU
+                sur tous les PC Windows 11 s'est concrétisée. En août 2025, les
+                nouveaux postes de développement sont majoritairement équipés de
+                NPU dédiant jusqu'à 40 TOPS (Tera Operations Per Second) au
+                traitement local des modèles, réduisant la latence et la
+                dépendance au cloud.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Des data centers repensés pour l'IA</h3>
+              <p>
+                Lors de la GTC 2025 (17-20 mars), Nvidia a présenté des
+                architectures de racks atteignant 1000 kW pour supporter
+                l'entraînement des modèles de plus en plus gourmands. Les
+                solutions de refroidissement liquide direct sont devenues la
+                norme pour ces infrastructures.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>L'IA Quantique : de la théorie à l'expérimentation</h3>
+              <p>
+                L'étude d'IBM du 10 juin 2025 a identifié des cas d'usage
+                concrets en optimisation logicielle et en résolution de
+                problèmes NP-difficiles, mais les applications restent confinées
+                à des projets de R&D en partenariat avec de grands acteurs
+                technologiques.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <div class="veille-section">
+          <h2>
+            <i class="fas fa-balance-scale"></i> 4. Défis et enjeux éthiques :
+            La prise de conscience
+          </h2>
+          <div class="veille-content">
+            <div class="veille-item">
+              <h3>La qualité des données, talon d'Achille</h3>
+              <p>
+                Le rapport de l'OCDE (25 novembre 2024) a mis en lumière les
+                limites des données synthétiques pour entraîner les modèles sans
+                biais. Tout au long de 2025, les efforts se sont concentrés sur
+                la création de jeux de données d'entraînement plus propres,
+                diversifiés et documentés.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Impact environnemental et régulation</h3>
+              <p>
+                L'estimation de l'empreinte carbone de l'entraînement de Llama
+                3.1 (8 930 tonnes de CO₂) a servi de catalyseur. L'AI Act
+                européen (en vigueur depuis le 1er août 2024) a commencé à
+                imposer des audits énergétiques stricts. Lors de la COP30
+                (novembre 2024), les engagements pour un "Green AI" se sont
+                multipliés.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Un paysage réglementaire en pleine construction</h3>
+              <p>
+                Les 59 nouvelles réglementations fédérales américaines (1er
+                février 2025) et l'AI Act ont forcé les éditeurs de logiciels à
+                intégrer des fonctionnalités de transparence et d'explicabilité
+                (XAI) dans leurs produits.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>La guerre des talents s'intensifie</h3>
+              <p>
+                L'étude de France Stratégie (10 mars 2025) pointant un besoin de
+                56 000 développeurs IA par an en France a sonné l'alarme. Les
+                profils hybrides (développeur + spécialiste IA) sont devenus les
+                plus recherchés et les mieux rémunérés sur le marché.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <div class="veille-section">
+          <h2>
+            <i class="fas fa-flag"></i> 5. Tendances régionales : La France, une
+            place forte européenne de l'IA
+          </h2>
+          <div class="veille-content">
+            <div class="veille-item">
+              <h3>Investissements records</h3>
+              <p>
+                Le sommet Choose France (13 mai 2025) a confirmé l'attractivité
+                du territoire avec 17 milliards d'euros d'investissements
+                annoncés, notamment pour la construction de data centers et de
+                campus de recherche dédiés à l'IA.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Un écosystème de startups dynamique</h3>
+              <p>
+                Le rapport Bpifrance (20 juin 2025) a montré une santé
+                florissante avec 1000 startups IA, doublant quasiment le nombre
+                de 2021. Les levées de fonds de 1,4 milliard d'euros en 2024 ont
+                permis à des pépites comme Mistral AI et Poolside de rivaliser à
+                l'international.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Une stratégie nationale ambitieuse</h3>
+              <p>
+                Le lancement de la troisième phase de la stratégie nationale IA
+                (17 février 2025) avec 560 millions d'euros a placé la formation
+                et la montée en compétence de la population (2 millions de
+                Français sensibilisés d'ici 2027) au cœur du dispositif.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <div class="veille-section">
+          <h2>
+            <i class="fas fa-crystal-ball"></i> 6. Perspectives pour la fin
+            d'année 2025 et au-delà
+          </h2>
+          <div class="veille-content">
+            <div class="veille-item">
+              <h3>Adoption massive et spécialisation</h3>
+              <p>
+                La prédiction d'IDC (80% des entreprises utilisant l'IA d'ici
+                décembre 2025) est en bonne voie. On observe une spécialisation
+                des modèles pour des langages ou frameworks spécifiques (ex: IA
+                dédiée au Rust ou au développement Salesforce).
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Synergie humain-machine</h3>
+              <p>
+                La prédiction de McKinsey (automatisation de 40% des tâches de
+                codage) se concrétise. Le rôle du développeur évolue vers celui
+                d'architecte logiciel, de superviseur et de "product manager" de
+                l'IA, se concentrant sur la résolution de problèmes complexes et
+                l'innovation.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Les Interfaces Conversationnelles (CLI)</h3>
+              <p>
+                Les mises à jour de systèmes comme Grok (15 juillet 2025) et
+                l'intégration profonde de ChatGPT dans les terminaux (via des
+                plugins) ont rendu la interaction verbale avec la machine plus
+                naturelle pour des tâches de développement et d'administration
+                système.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>L'IA "Économe en énergie" (Efficient AI)</h3>
+              <p>
+                La tendance la plus forte de la seconde moitié de 2025 est la
+                recherche d'efficacité énergétique, poussée par la régulation et
+                le coût. Les modèles "slimmés", le pruning (élagage) et le
+                quantization sont devenus des pratiques standard.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <div class="veille-conclusion">
+          <h2>Conclusion</h2>
+          <p>
+            Au 28 août 2025, l'IA n'est plus une option mais un pilier central
+            du développement informatique. La période écoulée a été caractérisée
+            par une démocratisation des outils, une montée en puissance des
+            capacités autonomes et une prise de conscience collective des enjeux
+            éthiques et environnementaux. La France a su se positionner comme un
+            acteur incontournable en Europe. Pour la suite, les défis principaux
+            résideront dans la gestion de la qualité des données, la formation
+            massive des talents et l'établissement d'un cadre de confiance
+            permettant d'exploiter le plein potentiel de cette symbiose entre
+            l'intelligence humaine et artificielle.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <footer>
+    <p>&copy; 2025 Mon Portfolio Personnel</p>
+  </footer>
+
+  <script>
+    const menu = document.getElementById("menu");
+    const overlay = document.getElementById("overlay");
+    const burger = document.querySelector(".burger");
+
+    function toggleMenu(btn) {
+      menu.classList.toggle("menu-active");
+      overlay.classList.toggle("overlay-active");
+      btn.classList.toggle("active");
+    }
+
+    function closeMenu() {
+      menu.classList.remove("menu-active");
+      overlay.classList.remove("overlay-active");
+      burger.classList.remove("active");
+    }
+  </script>
+</html>

@@ -1,0 +1,238 @@
+/* ---------- STYLES EXCLUSIFS POUR LA PAGE VEILLE TECHNOLOGIQUE ---------- */
+
+/* Styles pour le header de la page veille */
+header .subtitle {
+  font-size: 1.8rem;
+  color: #f2e63d;
+  text-shadow: 0 0 10px rgba(217, 181, 4, 0.6);
+  margin: 10px 0;
+  z-index: 2;
+  text-align: center;
+  font-weight: 500;
+}
+
+header .date-range {
+  font-size: 1.2rem;
+  color: #d9b504;
+  text-shadow: 0 0 8px rgba(217, 181, 4, 0.5);
+  z-index: 2;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Section de veille */
+#veille {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 40px 30px;
+  background: rgba(38, 38, 38, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(217, 181, 4, 0.15);
+}
+
+.veille-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.veille-intro,
+.veille-conclusion {
+  text-align: center;
+  padding: 30px;
+  background: rgba(13, 13, 13, 0.5);
+  border-radius: 15px;
+  border-left: 4px solid #d9b504;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.veille-intro:hover,
+.veille-conclusion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(217, 181, 4, 0.2);
+}
+
+.veille-intro h2,
+.veille-conclusion h2 {
+  color: #d9b504;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 0 0 8px rgba(217, 181, 4, 0.4);
+}
+
+.veille-intro p,
+.veille-conclusion p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: justify;
+  color: #f2e63d;
+}
+
+/* Sections de veille */
+.veille-section {
+  background: rgba(13, 13, 13, 0.5);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #8c7503;
+}
+
+.veille-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(217, 181, 4, 0.2);
+}
+
+.veille-section h2 {
+  color: #d9b504;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-shadow: 0 0 8px rgba(217, 181, 4, 0.4);
+}
+
+.veille-section h2 i {
+  font-size: 1.5rem;
+  color: #f2e63d;
+}
+
+.veille-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.veille-item {
+  padding: 20px;
+  background: rgba(38, 38, 38, 0.7);
+  border-radius: 10px;
+  border-left: 3px solid #f2e63d;
+  transition: all 0.3s ease;
+}
+
+.veille-item:hover {
+  background: rgba(38, 38, 38, 0.9);
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(242, 230, 61, 0.1);
+}
+
+.veille-item h3 {
+  color: #f2e63d;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(242, 230, 61, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.veille-item h3::before {
+  content: "•";
+  color: #d9b504;
+  font-size: 1.5rem;
+}
+
+.veille-item p {
+  line-height: 1.7;
+  color: #f2e63d;
+  text-align: justify;
+}
+
+/* Indicateur de progression */
+.veille-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #d9b504, #f2e63d);
+  z-index: 1000;
+  transition: width 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.veille-section {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.veille-section:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+.veille-section:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+/* Responsive design pour la page veille */
+@media (max-width: 900px) {
+  #veille {
+    margin: 60px 15px;
+    padding: 20px 15px;
+  }
+
+  .veille-section {
+    padding: 20px 15px;
+  }
+
+  .veille-section h2 {
+    font-size: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .veille-item {
+    padding: 15px;
+  }
+
+  header .subtitle {
+    font-size: 1.4rem;
+    padding: 0 20px;
+  }
+
+  header .date-range {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+
+  .veille-intro,
+  .veille-conclusion {
+    padding: 20px 15px;
+  }
+
+  .veille-intro h2,
+  .veille-conclusion h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .veille-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .veille-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .veille-item p {
+    font-size: 0.95rem;
+  }
+
+  header .subtitle {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mes Certifications</title>
+    <link rel="stylesheet" href="css/certifications.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Menu de navigation -->
+    <div class="burger" onclick="toggleMenu(this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="menu" id="menu">
+      <div class="menu-header">
+        <img
+          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+          alt="Photo de profil"
+          class="profile-image"
+        />
+        <h2 class="menu-title">Portfolio</h2>
+      </div>
+
+      <div class="menu-links">
+        <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+        <a href="#"><i class="fas fa-user"></i> Profil</a>
+        <a href="certifications.html" class="active"
+          ><i class="fas fa-certificate"></i> Certifications</a
+        >
+        <a href="#"><i class="fas fa-briefcase"></i> Projets</a>
+        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <!-- Contenu principal -->
+    <div class="content">
+      <h1 class="page-title">Mes Certifications</h1>
+      <p class="page-description">
+        Découvrez l'ensemble de mes certifications professionnelles. Chaque
+        certification est disponible en téléchargement au format PDF.
+      </p>
+
+      <!-- Statistiques -->
+      <div class="certifications-stats">
+        <div class="stat-card">
+          <div class="stat-number">12</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Domaines de compétence</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2023 - 2026</div>
+          <div class="stat-label">Période d'obtention</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Organismes certificateurs</div>
+        </div>
+      </div>
+
+      <!-- Filtres et recherche -->
+      <div class="certifications-filters">
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Rechercher une certification..."
+            onkeyup="filterCertifications()"
+          />
+        </div>
+        <div class="filter-category">
+          <select id="categoryFilter" onchange="filterCertifications()">
+            <option value="all">Toutes les catégories</option>
+            <option value="Devweb">Développement Web</option>
+            <option value="Finance">Finance</option>
+            <option value="IA">IA</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Grille des certifications -->
+      <div class="certifications-grid" id="certificationsGrid">
+        <!-- Certification 1 -->
+        <div class="certification-card" data-category="Finance">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-code"></i> 10 Powerful indicator
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> Udemy
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Novembre 2024
+            </p>
+            <p class="certification-description">
+              Certification qui permet de connaître 10 indicateurs puisssant en
+              finance
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">Finance</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a
+              href="Documents/Certif/10 Powerful indicator.pdf"
+              class="download-btn"
+              download
+            >
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 187 Ko</span
+            >
+          </div>
+        </div>
+
+        <!-- Certification 2 -->
+        <div class="certification-card" data-category="Finance">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-chart-line"></i> 12 Signals to master any market
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> Udemy
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Novembre 2024
+            </p>
+            <p class="certification-description">
+              Certifications permettant d'acquérir des compétences en finance en
+              détectant les mouvement de marché
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">Finance</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a
+              href="Documents/Certif/12 Signals to master any market.pdf"
+              class="download-btn"
+              download
+            >
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 187 Ko</span
+            >
+          </div>
+        </div>
+
+        <!-- Certification 3 -->
+        <div class="certification-card" data-category="IA">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-cloud"></i> Apprendre à créer un assistant vocal
+              IA (JARVIS) avec Python
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> Udemy
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Juillet 2025
+            </p>
+            <p class="certification-description">
+              Certification permettant de créé un assistant vocal IA avec python
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">IA</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a
+              href="Documents/Certif/Apprendre à créer un assistant vocal AI (JARVIS) avec Python.pdf"
+              class="download-btn"
+              download
+            >
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 231 Ko</span
+            >
+          </div>
+        </div>
+
+        <!-- Certification 4 -->
+        <div class="certification-card" data-category="IA">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-shield-alt"></i> Créez des agents IA et
+              automatisez vos tâches
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> Udemy
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Aout 2025
+            </p>
+            <p class="certification-description">
+              Certification couvrant les principes fondamentaux de la
+              l'automatisation et des agents IA
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">IA</span>
+              <span class="skill-tag">Agents</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a
+              href="Documents/Certif/Créez des Agents IA et automatisez vos tâches !.pdf"
+              class="download-btn"
+              download
+            >
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 245 Ko</span
+            >
+          </div>
+        </div>
+
+        <!-- Certification 5 -->
+        <div class="certification-card" data-category="Finance">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-tasks"></i> Day Trading advanced reversal
+              candlestick pattern
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> Udemy
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Novembre 2024
+            </p>
+            <p class="certification-description">
+              Certification permettant d'acquérir des compétences de
+              reconnaissance de pattern sur les marchés financier
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">Finance</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a
+              href="Documents/Certif/Day trading advanced reversal candlestick pattern.pdf"
+              class="download-btn"
+              download
+            >
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 219 Ko</span
+            >
+          </div>
+        </div>
+
+        <!-- Certification 6 -->
+        <div class="certification-card" data-category="Finance">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-language"></i> Forex Scalping Strategy +
+              Professional Forex Trading Robot
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> Udemy
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Juin 2025
+            </p>
+            <p class="certification-description">
+              Certification Udemy qui permet d'apprendre a codé un robot de
+              trading Forex ainsi que les stratégie de scalping
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">Finance</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a
+              href="Documents/Certif/Forex Scalping Strategy + Professional Forex Trading Robot.pdf"
+              class="download-btn"
+              download
+            >
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 235 Ko</span
+            >
+          </div>
+        </div>
+
+        <!-- Certification 6 -->
+        <div class="certification-card" data-category="Devweb">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-language"></i> Le Javascript de A à Z
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> Udemy
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Juin 2025
+            </p>
+            <p class="certification-description">
+              Certification qui certifie des compétences en JavaScript
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">Dev Web</span>
+              <span class="skill-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a
+              href="Documents/Certif/Le JavaScript de A à Z.pdf"
+              class="download-btn"
+              download
+            >
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 172 Ko</span
+            >
+          </div>
+        </div>
+
+        <!-- Certification 6 -->
+        <div class="certification-card" data-category="Finance">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-language"></i> Learn Advance tradinview strategie
+              & indicators in pinescript
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> Udemy
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Novembre 2024
+            </p>
+            <p class="certification-description">
+              Certification qui permet d'acquérir des compétences en finance et
+              en pinescript (langage de programmation de TradingView)
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">Finance</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a href="assets/certificat-toeic.pdf" class="download-btn" download>
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 230 Ko</span
+            >
+          </div>
+        </div>
+
+        <!-- Certification 6 -->
+        <div class="certification-card" data-category="Finance">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-language"></i> MQL5 ADVANCED Code an HMA Trend
+              Following Strategy
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> Udemy
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Novembre 2024
+            </p>
+            <p class="certification-description">
+              Certification qui permet d'apprendre à codé une HMA en MQL5
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">Finance</span>
+              <span class="skill-tag">MQL5</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a
+              href="Documents/Certif/MQL5 ADVANCED Code an HMA Trend Following Strategy.pdf"
+              class="download-btn"
+              download
+            >
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 227 Ko</span
+            >
+          </div>
+        </div>
+
+        <!-- Certification 6 -->
+        <div class="certification-card" data-category="IA">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-language"></i> MQL5 MACHINE LEARNING Linear
+              Regression for Algo Trading
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> Udemy
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Novembre 2024
+            </p>
+            <p class="certification-description">
+              Certification qui permet de codé une ligne de régression en MQL5
+              boosté par le machine learning
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">Finance</span>
+              <span class="skill-tag">IA</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a
+              href="Documents/Certif/MQL5 MACHINE LEARNING Linear Regression for Algo Trading.pdf"
+              class="download-btn"
+              download
+            >
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 232 Ko</span
+            >
+          </div>
+        </div>
+
+        <!-- Certification 6 -->
+        <div class="certification-card" data-category="IA">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-language"></i> Initiation à l'IA Institut
+              Montaigne
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> OpenClassrooms
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Aout 2023
+            </p>
+            <p class="certification-description">
+              Certification d'initation à l'IA. Le fonctionnement l'IA et les
+              bases
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">IA</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a
+              href="Documents/Certif/OpenClassrooms_InstitutMontaigne.pdf"
+              class="download-btn"
+              download
+            >
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 131 Ko</span
+            >
+          </div>
+        </div>
+
+        <!-- Certification 6 -->
+        <div class="certification-card" data-category="Devweb">
+          <div class="certification-header">
+            <h3 class="certification-title">
+              <i class="fas fa-language"></i> TypeScript en partant de zéro
+            </h3>
+            <p class="certification-issuer">
+              <i class="fas fa-university"></i> Udemy
+            </p>
+          </div>
+          <div class="certification-body">
+            <p class="certification-date">
+              <i class="far fa-calendar-alt"></i> Juin 2025
+            </p>
+            <p class="certification-description">
+              Certification Udemy qui permet d'apprendre a codé en TypeScript
+              (suite à la formation sur le JavaScript)
+            </p>
+            <div class="certification-skills">
+              <span class="skill-tag">TypeScript</span>
+            </div>
+          </div>
+          <div class="certification-footer">
+            <a
+              href="Documents/Certif/TypeScript en partant de Zéro.pdf"
+              class="download-btn"
+              download
+            >
+              <i class="fas fa-download"></i> Télécharger
+            </a>
+            <span class="file-info"
+              ><i class="far fa-file-pdf"></i> PDF - 183 Ko</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>© 2026 | Thomas GROSSAT. Tous droits réservés.</p>
+        <p>
+          Les certifications sont téléchargeables au format PDF pour
+          consultation.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Fonctions pour le menu
+      const menu = document.getElementById("menu");
+      const overlay = document.getElementById("overlay");
+      const burger = document.querySelector(".burger");
+
+      function toggleMenu(btn) {
+        menu.classList.toggle("menu-active");
+        overlay.classList.toggle("overlay-active");
+        btn.classList.toggle("active");
+      }
+
+      function closeMenu() {
+        menu.classList.remove("menu-active");
+        overlay.classList.remove("overlay-active");
+        burger.classList.remove("active");
+      }
+
+      // Fonction de filtrage des certifications
+      function filterCertifications() {
+        const searchInput = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const categoryFilter = document.getElementById("categoryFilter").value;
+        const certificationCards = document.querySelectorAll(
+          ".certification-card"
+        );
+
+        certificationCards.forEach((card) => {
+          const title = card
+            .querySelector(".certification-title")
+            .textContent.toLowerCase();
+          const description = card
+            .querySelector(".certification-description")
+            .textContent.toLowerCase();
+          const category = card.getAttribute("data-category");
+
+          const matchesSearch =
+            title.includes(searchInput) || description.includes(searchInput);
+          const matchesCategory =
+            categoryFilter === "all" || category === categoryFilter;
+
+          if (matchesSearch && matchesCategory) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      // Simuler le téléchargement si les fichiers n'existent pas
+      document.querySelectorAll(".download-btn").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          const filename = this.getAttribute("href").split("/").pop();
+          alert(
+            `Téléchargement du fichier: ${filename}\n\nDans un environnement réel, le fichier PDF serait téléchargé.`
+          );
+
+          // Pour un environnement de test, on peut empêcher le comportement par défaut
+          // e.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

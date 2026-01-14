@@ -1,0 +1,632 @@
+/* ---------- STYLES EXCLUSIFS POUR LA PAGE BTS SIO ---------- */
+
+/* Styles pour le header de la page BTS SIO */
+header .subtitle {
+  font-size: 1.6rem;
+  color: #f2e63d;
+  text-shadow: 0 0 10px rgba(217, 181, 4, 0.6);
+  margin: 10px 0;
+  z-index: 2;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+header .date-range {
+  font-size: 1.1rem;
+  color: #d9b504;
+  text-shadow: 0 0 8px rgba(217, 181, 4, 0.5);
+  z-index: 2;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Section BTS SIO */
+#bts-sio {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 40px 30px;
+  background: rgba(38, 38, 38, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(217, 181, 4, 0.15);
+}
+
+.bts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Introduction */
+.bts-intro {
+  text-align: center;
+  padding: 40px;
+  background: rgba(13, 13, 13, 0.5);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bts-intro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(217, 181, 4, 0.2);
+}
+
+.bts-intro h2 {
+  color: #d9b504;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  text-shadow: 0 0 8px rgba(217, 181, 4, 0.4);
+}
+
+.bts-intro p {
+  line-height: 1.8;
+  font-size: 1.2rem;
+  text-align: justify;
+  color: #f2e63d;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sections générales */
+.options-section,
+.programme-section,
+.stage-section,
+.competences-section,
+.etudes-section,
+.mon-parcours {
+  background: rgba(13, 13, 13, 0.5);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.options-section:hover,
+.programme-section:hover,
+.stage-section:hover,
+.competences-section:hover,
+.etudes-section:hover,
+.mon-parcours:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(217, 181, 4, 0.2);
+}
+
+.options-section h2,
+.programme-section h2,
+.stage-section h2,
+.competences-section h2,
+.etudes-section h2,
+.mon-parcours h2 {
+  color: #d9b504;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-shadow: 0 0 8px rgba(217, 181, 4, 0.4);
+}
+
+.options-section h2 i,
+.programme-section h2 i,
+.stage-section h2 i,
+.competences-section h2 i,
+.etudes-section h2 i,
+.mon-parcours h2 i {
+  font-size: 1.5rem;
+  color: #f2e63d;
+}
+
+/* Options SISR/SLAM */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.option-card {
+  background: rgba(38, 38, 38, 0.7);
+  border-radius: 12px;
+  padding: 25px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.option-card:hover {
+  transform: translateY(-8px);
+  border-color: #f2e63d;
+  box-shadow: 0 15px 30px rgba(242, 230, 61, 0.15);
+}
+
+.option-card:nth-child(1):hover {
+  border-color: #4dabf7;
+}
+
+.option-card:nth-child(2):hover {
+  border-color: #51cf66;
+}
+
+.option-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #8c7503;
+}
+
+.option-header i {
+  font-size: 3rem;
+  color: #f2e63d;
+  margin-bottom: 10px;
+}
+
+.option-header h3 {
+  color: #d9b504;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  text-shadow: 0 0 5px rgba(217, 181, 4, 0.3);
+}
+
+.option-badge {
+  background: linear-gradient(135deg, #8c7503, #d9b504);
+  color: #0d0d0d;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.option-content h4 {
+  color: #f2e63d;
+  margin: 15px 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.option-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.option-content li {
+  color: #f2e63d;
+  padding: 5px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.option-content li::before {
+  content: "▸";
+  color: #d9b504;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Programme de formation */
+.matieres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.matiere-category {
+  background: rgba(38, 38, 38, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.matiere-category h3 {
+  color: #d9b504;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.matiere-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.matiere-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: rgba(13, 13, 13, 0.5);
+  border-radius: 8px;
+
+  transition: all 0.3s ease;
+}
+
+.matiere-item:hover {
+  background: rgba(13, 13, 13, 0.7);
+  transform: translateX(5px);
+}
+
+.matiere-nom {
+  color: #f2e63d;
+  font-weight: 500;
+}
+
+.matiere-coeff {
+  background: #8c7503;
+  color: #0d0d0d;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Stage en entreprise */
+.stage-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.stage-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stage-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(38, 38, 38, 0.7);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.stage-item:hover {
+  background: rgba(38, 38, 38, 0.9);
+  transform: translateX(5px);
+}
+
+.stage-item i {
+  font-size: 1.8rem;
+  color: #d9b504;
+  min-width: 40px;
+}
+
+.stage-item h4 {
+  color: #f2e63d;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.stage-item p {
+  color: #f2e63d;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.stage-avantages {
+  background: rgba(38, 38, 38, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.stage-avantages h4 {
+  color: #d9b504;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.stage-avantages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.stage-avantages li {
+  color: #f2e63d;
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.stage-avantages li::before {
+  content: "✓";
+  color: #d9b504;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Compétences acquises */
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.competence-category {
+  background: rgba(38, 38, 38, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.competence-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(242, 230, 61, 0.1);
+}
+
+.competence-category h3 {
+  color: #d9b504;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.competence-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.competence-category li {
+  color: #f2e63d;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(140, 117, 3, 0.3);
+}
+
+.competence-category li:last-child {
+  border-bottom: none;
+}
+
+/* Poursuite d'études */
+.etudes-content p {
+  color: #f2e63d;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.etudes-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.etude-option {
+  background: rgba(38, 38, 38, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.etude-option h4 {
+  color: #d9b504;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.etude-option ul {
+  list-style: none;
+  padding: 0;
+}
+
+.etude-option li {
+  color: #f2e63d;
+  padding: 6px 0;
+  font-size: 0.95rem;
+}
+
+/* Mon parcours */
+.parcours-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.parcours-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.parcours-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(38, 38, 38, 0.7);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.parcours-item:hover {
+  background: rgba(38, 38, 38, 0.9);
+  transform: translateX(5px);
+}
+
+.parcours-item i {
+  font-size: 1.8rem;
+  color: #d9b504;
+  min-width: 40px;
+}
+
+.parcours-item h4 {
+  color: #f2e63d;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.parcours-item p {
+  color: #f2e63d;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.parcours-projets {
+  background: rgba(38, 38, 38, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.parcours-projets h4 {
+  color: #d9b504;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.parcours-projets ul {
+  list-style: none;
+  padding: 0;
+}
+
+.parcours-projets li {
+  color: #f2e63d;
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  border-bottom: 1px solid rgba(140, 117, 3, 0.3);
+}
+
+.parcours-projets li::before {
+  content: "🚀";
+  position: absolute;
+  left: 0;
+}
+
+.parcours-projets li:last-child {
+  border-bottom: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.options-section,
+.programme-section,
+.stage-section,
+.competences-section,
+.etudes-section,
+.mon-parcours {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.options-section {
+  animation-delay: 0.1s;
+}
+
+.programme-section {
+  animation-delay: 0.2s;
+}
+
+.stage-section {
+  animation-delay: 0.3s;
+}
+
+.competences-section {
+  animation-delay: 0.4s;
+}
+
+.etudes-section {
+  animation-delay: 0.5s;
+}
+
+.mon-parcours {
+  animation-delay: 0.6s;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  #bts-sio {
+    margin: 60px 15px;
+    padding: 20px 15px;
+  }
+
+  .bts-container {
+    gap: 40px;
+  }
+
+  .options-grid,
+  .matieres-grid,
+  .stage-content,
+  .competences-grid,
+  .etudes-options,
+  .parcours-content {
+    grid-template-columns: 1fr;
+  }
+
+  .bts-intro {
+    padding: 25px 15px;
+  }
+
+  .options-section,
+  .programme-section,
+  .stage-section,
+  .competences-section,
+  .etudes-section,
+  .mon-parcours {
+    padding: 20px 15px;
+  }
+
+  header .subtitle {
+    font-size: 1.3rem;
+    padding: 0 20px;
+  }
+
+  header .date-range {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bts-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .options-section h2,
+  .programme-section h2,
+  .stage-section h2,
+  .competences-section h2,
+  .etudes-section h2,
+  .mon-parcours h2 {
+    font-size: 1.5rem;
+  }
+
+  .option-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .matiere-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .stage-item,
+  .parcours-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .stage-item i,
+  .parcours-item i {
+    align-self: center;
+  }
+}
