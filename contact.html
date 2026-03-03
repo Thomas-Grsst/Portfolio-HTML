@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--import de fontawesome pour ajouter des icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <title>Contact - Portfolio</title>
+  </head>
+  <body>
+    <header id="accueil">
+      <div class="burger" onclick="toggleMenu(this)">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu" id="menu">
+        <div class="menu-header">
+          <img
+            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+            alt="Photo de profil"
+            class="profile-image"
+          />
+          <h2 class="menu-title">Mon site web</h2>
+        </div>
+
+        <div class="menu-links">
+          <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+          <a href="BTS-SIO.html"
+            ><i class="fas fa-graduation-cap"></i> BTS SIO</a
+          >
+          <a href="veille-info.html"
+            ><i class="fas fa-brain"></i> Veille Technologique</a
+          >
+          <a href="/certifications.html"
+            ><i class="fas fa-certificate"></i> Certifications</a
+          >
+          <a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+      </div>
+
+      <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+      <div class="container">
+        <video autoplay loop muted plays-inline class="video">
+          <source src="video/black-hole.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <h1>Contact</h1>
+      <p class="subtitle">Disponible pour vous</p>
+      <p class="date-range">Discutons ensemble</p>
+    </header>
+
+    <section id="contact">
+      <div class="contact-container">
+        <!-- Introduction -->
+        <div class="contact-intro">
+          <h2>Restons en contact</h2>
+          <p>
+            Que vous ayez une question, une proposition de collaboration, ou
+            simplement envie d'échanger sur vos projets, je serais ravi de vous
+            lire. N'hésitez pas à utiliser le formulaire ci-dessous ou à me
+            contacter directement via mes réseaux.
+          </p>
+        </div>
+
+        <!-- Formulaire et infos -->
+        <div class="contact-content">
+          <!-- Formulaire de contact avec Netlify Forms -->
+          <div class="contact-form-section">
+            <h2><i class="fas fa-paper-plane"></i> Envoyez-moi un message</h2>
+
+            <!-- IMPORTANT: Les attributs netlify et name sont essentiels -->
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/success"
+              class="contact-form"
+            >
+              <!-- Champ caché anti-bot (honeypot) -->
+              <p class="hidden" style="display: none">
+                <label>
+                  Ne remplissez pas ce champ si vous êtes humain :
+                  <input name="bot-field" />
+                </label>
+              </p>
+
+              <!-- Champ caché requis pour Netlify -->
+              <input type="hidden" name="form-name" value="contact" />
+
+              <!-- Nom -->
+              <div class="form-group">
+                <label for="nom">
+                  <i class="fas fa-user"></i> Nom complet
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  placeholder="Votre nom"
+                  required
+                  minlength="2"
+                  maxlength="100"
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">
+                  <i class="fas fa-envelope"></i> Email
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="votre.email@exemple.com"
+                  required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                />
+              </div>
+
+              <!-- Sujet avec sélecteur -->
+              <div class="form-group">
+                <label for="sujet">
+                  <i class="fas fa-tag"></i> Sujet
+                  <span class="required">*</span>
+                </label>
+                <select id="sujet" name="sujet" required>
+                  <option value="" disabled selected>
+                    Choisissez un sujet
+                  </option>
+                  <option value="projet">💼 Proposition de projet</option>
+                  <option value="stage">🎓 Opportunité de stage</option>
+                  <option value="emploi">👔 Offre d'emploi</option>
+                  <option value="collaboration">🤝 Collaboration</option>
+                  <option value="freelance">⚡ Mission freelance</option>
+                  <option value="autre">📝 Autre</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message">
+                  <i class="fas fa-comment"></i> Message
+                  <span class="required">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Décrivez votre projet, vos attentes, ou votre message..."
+                  required
+                  minlength="10"
+                  maxlength="5000"
+                ></textarea>
+                <div class="char-counter">
+                  <span id="charCount">0</span>/5000 caractères
+                </div>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Envoyer le message
+              </button>
+            </form>
+          </div>
+          <!-- FIN de la div contact-form-section -->
+
+          <!-- Informations de contact -->
+          <div class="contact-info-section">
+            <h2><i class="fas fa-address-card"></i> Mes coordonnées</h2>
+
+            <div class="info-grid">
+              <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Localisation</h4>
+                  <p>Trévoux, France</p>
+                  <p class="info-detail">Disponible pour du télétravail</p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <h4>Téléphone</h4>
+                  <p>+33 6 58 45 88 72</p>
+                  <p class="info-detail">Disponible du lundi au dimanche</p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>thomasgrossat.pro@gmail.com</p>
+                  <p class="info-detail">Réponse sous 24-48h</p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Disponibilités</h4>
+                  <p>Lun - Ven : 9h - 19h</p>
+                  <p class="info-detail">Sam - Dim : Sur rendez-vous</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="social-section">
+              <h3><i class="fas fa-share-alt"></i> Retrouvez-moi sur</h3>
+              <div class="social-grid">
+                <a href="#" class="social-card linkedin"
+                  ><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a
+                >
+                <a href="#" class="social-card github"
+                  ><i class="fab fa-github"></i><span>GitHub</span></a
+                >
+                <a href="#" class="social-card twitter"
+                  ><i class="fab fa-twitter"></i><span>Twitter</span></a
+                >
+                <a href="#" class="social-card instagram"
+                  ><i class="fab fa-instagram"></i><span>Instagram</span></a
+                >
+              </div>
+            </div>
+
+            <!-- Carte ou localisation supplémentaire -->
+            <div class="map-section">
+              <h3><i class="fas fa-globe"></i> Zone de mobilité</h3>
+              <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Île-de-France et télétravail</p>
+                <p class="info-detail">
+                  Déplacements possibles sur toute la France
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section FAQ rapide -->
+        <div class="faq-section">
+          <h2><i class="fas fa-question-circle"></i> Questions fréquentes</h2>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h4>📬 Délai de réponse ?</h4>
+              <p>
+                Je m'efforce de répondre à tous les messages sous 24 à 48 heures
+                ouvrées.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h4>🤝 Types de collaboration ?</h4>
+              <p>
+                Freelance, CDI, stage, alternance - je suis ouvert à toutes les
+                propositions !
+              </p>
+            </div>
+            <div class="faq-item">
+              <h4>💼 Disponibilité immédiate ?</h4>
+              <p>
+                Je suis disponible pour démarrer un nouveau projet à partir de
+                maintenant.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h4>📎 Envoyer un CV ?</h4>
+              <p>
+                Vous pouvez joindre des fichiers dans le formulaire ou demander
+                mon CV par email.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 | Thomas GROSSAT</p>
+    </footer>
+
+    <script>
+      const menu = document.getElementById("menu");
+      const overlay = document.getElementById("overlay");
+      const burger = document.querySelector(".burger");
+
+      function toggleMenu(btn) {
+        menu.classList.toggle("menu-active");
+        overlay.classList.toggle("overlay-active");
+        btn.classList.toggle("active");
+      }
+
+      function closeMenu() {
+        menu.classList.remove("menu-active");
+        overlay.classList.remove("overlay-active");
+        burger.classList.remove("active");
+      }
+
+      // Compteur de caractères
+      document.addEventListener("DOMContentLoaded", function () {
+        const messageField = document.getElementById("message");
+        const charCount = document.getElementById("charCount");
+
+        if (messageField && charCount) {
+          messageField.addEventListener("input", function () {
+            charCount.textContent = this.value.length;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

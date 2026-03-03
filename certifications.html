@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -37,8 +37,7 @@
         <a href="certifications.html"
           ><i class="fas fa-certificate"></i> Certifications</a
         >
-        <a href="#"><i class="fas fa-briefcase"></i> Contact</a>
-        <a href="#"><i class="fas fa-envelope"></i> À propos</a>
+        <a href="/contact.html"><i class="fas fa-briefcase"></i> Contact</a>
       </div>
     </div>
 
@@ -567,7 +566,7 @@
           .value.toLowerCase();
         const categoryFilter = document.getElementById("categoryFilter").value;
         const certificationCards = document.querySelectorAll(
-          ".certification-card"
+          ".certification-card",
         );
 
         certificationCards.forEach((card) => {
@@ -597,7 +596,7 @@
         btn.addEventListener("click", function (e) {
           const filename = this.getAttribute("href").split("/").pop();
           alert(
-            `Téléchargement du fichier: ${filename}\n\nDans un environnement réel, le fichier PDF serait téléchargé.`
+            `Téléchargement du fichier: ${filename}\n\nDans un environnement réel, le fichier PDF serait téléchargé.`,
           );
 
           // Pour un environnement de test, on peut empêcher le comportement par défaut
