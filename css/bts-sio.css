@@ -43,7 +43,9 @@ header .date-range {
   padding: 40px;
   background: rgba(13, 13, 13, 0.5);
   border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .bts-intro:hover {
@@ -78,7 +80,9 @@ header .date-range {
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .options-section:hover,
@@ -629,4 +633,38 @@ header .date-range {
   .parcours-item i {
     align-self: center;
   }
+}
+
+/* Boutons */
+
+.doc-E6 .button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #8c7503, #d9b504);
+}
+
+.doc-E6 {
+  max-width: 600px; /* ⬅️ limite la largeur */
+  width: 100%;
+  margin: 0 auto; /* ⬅️ centre le bloc */
+  padding: 20px;
+  text-align: center;
+}
+
+.E6-image img {
+  width: 100%;
+  max-width: 100%; /* ⬅️ sécurité */
+  height: auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.doc-E6 .button {
+  display: inline-block; /* ⬅️ mieux que block ici */
+  margin: 20px auto;
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #d9b504, #f2e63d);
+  color: #0d0d0d;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
 }
