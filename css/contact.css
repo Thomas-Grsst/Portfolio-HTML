@@ -3,6 +3,10 @@ html {
   background-color: black;
 }
 
+.contact-intro {
+  padding: 30px;
+}
+
 .contact-content-simple {
   max-width: 900px;
   margin: 0 auto;
@@ -238,6 +242,14 @@ html {
 }
 .social-item.instagram:hover i {
   color: #e1306c;
+}
+
+.social-item.hellowork:hover {
+  border-color: #e11616;
+  background: rgba(225, 48, 108, 0.2);
+}
+.social-item.hellowork:hover i {
+  color: #e11616;
 }
 
 /* Carte de visite */

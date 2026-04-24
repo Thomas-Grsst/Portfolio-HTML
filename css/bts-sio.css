@@ -668,3 +668,27 @@ header .date-range {
   text-decoration: none;
   font-weight: 600;
 }
+
+.doc-stage {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.doc-stage img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.doc-stage .button {
+  display: inline-block; /* ⬅️ mieux que block ici */
+  margin: 20px auto;
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #d9b504, #f2e63d);
+  color: #0d0d0d;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
