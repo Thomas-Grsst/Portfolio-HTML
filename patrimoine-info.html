@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Portfolio - Patrimoine Informatique</title>
+  </head>
+
+  <header id="accueil">
+    <div class="burger" onclick="toggleMenu(this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="menu" id="menu">
+      <div class="menu-header">
+        <img
+          src="/images/photoprofil.jpg"
+          alt="Photo de profil"
+          class="profile-image"
+        />
+        <h2 class="menu-title">Mon Site Web</h2>
+      </div>
+
+      <div class="menu-links">
+        <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+        <a href="BTS-SIO.html"><i class="fas fa-graduation-cap"></i> BTS SIO</a>
+        <a href="veille-info.html"
+          ><i class="fas fa-brain"></i> Veille Technologique</a
+        >
+        <a href="patrimoine-info.html"
+          ><i class="fa-solid fa-desktop"></i> Patrimoine info</a
+        >
+        <a href="/certifications.html"
+          ><i class="fas fa-certificate"></i> Certifications</a
+        >
+        <a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <div class="container">
+      <video autoplay loop muted plays-inline class="video">
+        <source src="video/black-hole.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <h1>Patrimoine Informatique</h1>
+    <p class="subtitle">Préserver l'histoire du numérique</p>
+    <p class="date-range">Mémoire et transmission</p>
+  </header>
+
+  <body id="corp">
+    <section id="veille">
+      <div class="veille-container">
+        <div class="veille-intro">
+          <h2>Qu'est-ce que le patrimoine informatique ?</h2>
+          <p>
+            Le patrimoine informatique désigne l'ensemble des biens matériels et immatériels 
+            liés à l'histoire de l'informatique. Cela inclut :
+          </p>
+          <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
+            <li><strong>Matériel historique</strong> : ordinateurs anciens (Apple II, Commodore 64, Thomson TO7, Amiga), consoles rétro (NES, Mega Drive), calculateurs mécaniques.</li>
+            <li><strong>Logiciels et systèmes disparus</strong> : MS-DOS, AmigaOS, BeOS, logiciels mythiques (Lotus 1-2-3, WordPerfect, Delphi).</li>
+            <li><strong>Sources et documentation</strong> : code source de programmes anciens, manuels techniques, revues informatiques (Hebdogiciel, Tilt).</li>
+            <li><strong>Savoir-faire</strong> : langages oubliés (BASIC, Pascal), techniques de programmation contraintes.</li>
+          </ul>
+        </div>
+
+        <br /><br />
+
+        <div class="veille-section">
+          <h2>
+            <i class="fas fa-exclamation-triangle"></i> Pourquoi est-ce important de le préserver ?
+          </h2>
+          <div class="veille-content">
+            <div class="veille-item">
+              <h3><i class="fas fa-book"></i> 1. Mémoire culturelle et historique</h3>
+              <p>
+                L'informatique a transformé le monde en moins d'un siècle. Les machines et logiciels 
+                d'hier sont les témoins de cette révolution. Les oublier, c'est perdre une partie 
+                de notre histoire collective, au même titre que les œuvres d'art ou les livres anciens.
+              </p>
+            </div>
+
+            <div class="veille-item">
+              <h3><i class="fas fa-graduation-cap"></i> 2. Transmission du savoir</h3>
+              <p>
+                Étudier les anciennes architectures (processeurs 8/16 bits, mémoire limitée) permet 
+                de comprendre les bases fondamentales de l'informatique. Les contraintes de l'époque 
+                forçaient à une créativité et une optimisation dont les développeurs modernes peuvent 
+                encore s'inspirer.
+              </p>
+            </div>
+
+            <div class="veille-item">
+              <h3><i class="fas fa-balance-scale"></i> 3. Enjeux juridiques et mémoriels</h3>
+              <p>
+                Des milliers de jeux et logiciels des années 80-90 risquent de disparaître à cause 
+                des droits d'auteur non renouvelés ou des supports dégradés. Des associations 
+                comme <strong>MO5.com</strong> ou <strong>Internet Archive</strong> œuvrent pour 
+                sauvegarder cet "abandonware" avant qu'il ne soit perdu à jamais.
+              </p>
+            </div>
+
+            <div class="veille-item">
+              <h3><i class="fas fa-microchip"></i> 4. Préserver la rareté technique</h3>
+              <p>
+                Les composants électroniques vieillissent : condensateurs qui fuient, disquettes 
+                qui se démagnétisent, ROMs qui s'effacent. Sans restauration et archivage actifs, 
+                des machines entières deviendront irrécupérables dans les prochaines décennies.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <br /><br />
+
+        <div class="veille-section">
+          <h2>
+            <i class="fas fa-tools"></i> Comment préserve-t-on ?
+          </h2>
+          <div class="veille-content">
+            <div class="veille-item">
+              <h3>Restauration matérielle</h3>
+              <p>
+                Remplacement des composants défaillants (condensateurs, alimentations), 
+                nettoyage des cartes mères, recréation de pièces par impression 3D.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Émulation</h3>
+              <p>
+                Des logiciels comme DosBox, WinUAE ou MAME permettent de faire tourner 
+                d'anciens programmes sur du matériel moderne. Le FPGA (MiSTer) offre 
+                une émulation matérielle quasi parfaite.
+              </p>
+            </div>
+            <div class="veille-item">
+              <h3>Archivage numérique</H3>
+              <p>
+                Des sites comme <strong>archive.org</strong> sauvegardent des milliers de 
+                logiciels, revues et manuels. Des outils comme KryoFlux permettent de lire 
+                et sauvegarder des disquettes anciennes avant qu'elles ne s'effacent.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <br /><br />
+
+        <div class="veille-conclusion">
+          <h2>Conclusion</h2>
+          <p>
+            Le patrimoine informatique n'est pas une simple nostalgie : c'est une mémoire vivante 
+            qui nous relie aux origines de notre discipline. Préserver les machines d'hier, c'est 
+            comprendre le présent et mieux construire l'avenir. Chacun peut contribuer, ne serait-ce 
+            qu'en parlant de ces technologies oubliées autour de soi.
+          </p>
+          <br />
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <footer>
+    <p>&copy; 2026 Mon Portfolio Personnel - Patrimoine Informatique</p>
+  </footer>
+
+  <script>
+    const menu = document.getElementById("menu");
+    const overlay = document.getElementById("overlay");
+    const burger = document.querySelector(".burger");
+
+    function toggleMenu(btn) {
+      menu.classList.toggle("menu-active");
+      overlay.classList.toggle("overlay-active");
+      btn.classList.toggle("active");
+    }
+
+    function closeMenu() {
+      menu.classList.remove("menu-active");
+      overlay.classList.remove("overlay-active");
+      burger.classList.remove("active");
+    }
+  </script>
+</html>
